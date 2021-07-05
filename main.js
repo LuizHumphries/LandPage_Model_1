@@ -24,16 +24,30 @@ for (const link of links) {
 
 /* adicionar sombra no header */
 
-const header = document.querySelector("#headerpage")
-const navHeight = header.offsetHeight;
 
-window.addEventListener('scroll', function() {
+function changeHeaderWhenScroll () {
+
+  const header = document.querySelector("#headerpage")
+  const navHeight = header.offsetHeight;
+  
+
   if(window.scrollY >= navHeight) {
     header.classList.add('scroll')
   } else {
     header.classList.remove('scroll')
   }
-})
+}
+
+function backToTop() {
+  const backToTopButton = document.querySelector('.back-to-top') 
+
+  if(this.window.scrollY >= 560) {
+    backToTopButton.classList.add('show')
+  } else {
+    backToTopButton.classList.remove('show')
+  }
+}
+
 
 const swiper = new Swiper('.swiper-container', {
   slidesPerView: 1,
@@ -47,6 +61,8 @@ const swiper = new Swiper('.swiper-container', {
 );
 
 
+/* scroll reveal */
+
 const scrollReveal = ScrollReveal({
   origin: 'top',
   distance: '30px',
@@ -55,5 +71,14 @@ const scrollReveal = ScrollReveal({
 })
 
 scrollReveal.reveal(
-  `#home .img, #paes .img, #confeiteiro .img`, {interval: 80}
+  `#home .img, #paes .img, #confeiteiro .img, footer .brand, footer .social`, {interval: 80}
 )
+
+/* botao reveal */
+
+
+window.addEventListener('scroll', function() {
+  changeHeaderWhenScroll()
+  backToTop()
+})
+
