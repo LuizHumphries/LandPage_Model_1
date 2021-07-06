@@ -56,6 +56,12 @@ const swiper = new Swiper('.swiper-container', {
   },
   mousewhell: true,
   keyboard: true,
+  breakpoints: {
+    1200: {      
+      slidesPerView: 1,
+      setWrapperSize: true,
+    }
+  }
 
   },
 );
