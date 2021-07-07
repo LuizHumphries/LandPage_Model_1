@@ -156,11 +156,15 @@ nav ul li a {
   position: relative;
 }
 
-nav ul li a.title {
+nav .menu ul li a.title {
   font-size: var(--font_menu_size);
+  -webkit-font-smoothing: antialiased;
 }
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
   color: var(--enfasisfontolor);
+  font-weight: bold;
+  -webkit-font-smoothing: auto;
 }
 nav ul li a::after {
   content: '';
@@ -172,7 +176,8 @@ nav ul li a::after {
   bottom: var(--height_header_animation);
   transition: width 0.2s;
 }
-nav ul li a:hover::after {
+nav ul li a:hover::after,
+nav ul li a.active::after {
   width: 100%;
 }
 
