@@ -24,12 +24,11 @@ ul {
   --height_button: 2.5rem;
   --height_header_animation: -1.5rem;
 
-
   /* Width */
 
   --width_initial_image: 70%;
   --width_swipe_image: 60%;
-  --width_img_image: 70%;  
+  --width_img_image: 70%;
 
   /*Color */
   --basefontcolor: hsl(41, 57%, 64%);
@@ -290,8 +289,6 @@ nav.show .icon-cancel-circle {
   color: var(--enfasisfontolor);
 }
 
-
-
 #home .text p {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -307,7 +304,6 @@ nav.show .icon-cancel-circle {
   border-bottom: 1px solid var(--dividercolor);
 }
 
-
 #paes p {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
@@ -318,7 +314,7 @@ nav.show .icon-cancel-circle {
 
 #paes img {
   width: var(--width_swipe_image);
-  border-radius: 1.5rem;  
+  border-radius: 1.5rem;
 }
 
 #paes .swiper-swipper {
@@ -327,14 +323,12 @@ nav.show .icon-cancel-circle {
   height: auto;
 }
 
-
 #confeiteiro {
   text-align: center;
   align-items: center;
   justify-content: center;
   border-bottom: 1px solid var (--dividercolor);
 }
-
 
 #confeiteiro .text {
   margin-bottom: var(--margin_text_text);
@@ -351,8 +345,6 @@ nav.show .icon-cancel-circle {
   margin-bottom: 1rem;
   font-size: var(--font_text_size);
 }
-
-
 
 .swiper-slide {
   height: auto;
@@ -451,12 +443,12 @@ footer .social a:hover {
     --height_header: 7.25rem;
     --height_button: 3rem;
 
-
     --width_initial_image: 110%;
     --width_swipe_image: 15%;
     --width_img_image: 110%;
-    
+
     --icon_toggle_size: 2rem;
+    --icon_social_size: 2.5rem;
 
     --font_logo_size: 1.5rem;
     --font_title_size: 1.5rem;
@@ -469,7 +461,7 @@ footer .social a:hover {
   }
 
   .container {
-    max-width: 1120px;    
+    max-width: 1120px;
     margin-right: auto;
     margin-left: auto;
   }
@@ -478,7 +470,6 @@ footer .social a:hover {
     padding: 10rem 0;
   }
 
-  
   nav .menu {
     opacity: 1;
     visibility: visible;
@@ -487,7 +478,7 @@ footer .social a:hover {
 
   nav .menu ul {
     display: flex;
-    gap: 2rem
+    gap: 2rem;
   }
 
   nav .icon-menu {
@@ -498,21 +489,20 @@ footer .social a:hover {
 
   #home .img {
     order: 1;
-  } 
+  }
 
   #home .container {
-    grid-auto-flow: column;    
+    grid-auto-flow: column;
     justify-content: space-between;
     margin: 0 auto;
   }
 
   #home .text {
     order: 0;
-    margin: auto 0;    
+    margin: auto 0;
     max-width: 28rem;
     text-align: left;
     align-items: center;
-         
   }
 
   #home .text p {
@@ -520,61 +510,52 @@ footer .social a:hover {
     margin-right: 0;
   }
 
-  #home .img::before {    
+  #home .img::before {
     right: -13%;
   }
-  
+
   #paes .img {
     order: 1;
     max-width: 500px;
-  } 
+  }
   #paes img {
     width: 60%;
     height: auto;
   }
   #paes .container {
     display: grid;
-    grid-auto-flow: column;    
+    grid-auto-flow: column;
     justify-content: space-between;
     margin: 0 auto;
   }
   #paes .text {
     order: 0;
-    margin: auto 0;    
+    margin: auto 0;
     max-width: 28rem;
     text-align: left;
     align-items: center;
-         
   }
   #paes .text p {
     margin-left: 0;
     margin-right: 0;
   }
-  
-  
 
-  #confeiteiro .text { 
-    display: grid;   
-    grid-auto-flow: column;    
+  #confeiteiro .img {
+    order: 1;
+  }
+
+  #confeiteiro .container {
+    grid-auto-flow: column;
     justify-content: space-between;
     margin: 0 auto;
   }
 
-  #confeiteiro .text .title {
-    order: 1;
-  }
-
-  #confeiteiro .text p {
-    order: 2;
-  } 
-
-  #confeiteiro .text .img {
+  #confeiteiro .text {
     order: 0;
-    margin: auto 0;    
+    margin: auto 0;
     max-width: 28rem;
     text-align: left;
     align-items: center;
-         
   }
 
   #confeiteiro .text p {
@@ -582,20 +563,29 @@ footer .social a:hover {
     margin-right: 0;
   }
 
-  
+  footer .container {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+  }
+
+  footer .social {
+    display: flex;
+    align-items: center;
+  }
+}
 
 /* Large Devices: 1023px > * */
 
 /* Large Devices: 992px > * */
-@media (min-width: 992px) and (max-width: 1200px)  {
+@media (min-width: 992px), (max-width: 1200px) {
   :root {
     --height_header: 7.25rem;
     --height_button: 3rem;
 
-
     --width_initial_image: 55%;
     --width_swipe_image: 40%;
-    
+
     --icon_toggle_size: 2rem;
 
     --font_logo_size: 2rem;
@@ -608,10 +598,9 @@ footer .social a:hover {
     --margin_text_text: 2rem;
   }
 
-  #home .img::before {    
+  #home .img::before {
     right: 21%;
   }
-
 }
 
 /* Large Devices: 767px > * */
